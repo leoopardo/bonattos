@@ -29,6 +29,7 @@ export interface ProductsQuery {
   category?: string;
   brand?: string;
   collection?: string;
+  search?: string;
   p?: boolean;
   m?: boolean;
   g?: boolean;

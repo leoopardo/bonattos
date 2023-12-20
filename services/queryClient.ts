@@ -5,11 +5,5 @@ let unauthorizedNotificationShown = false; // Variável para controlar se a noti
 export const queryClient = new QueryClient({
   queryCache: new QueryCache({ 
   }),
-  defaultOptions: {
-    queries: {
-      retry: false,
-      refetchOnWindowFocus: true,
-      refetchOnReconnect: "always"
-    },
-  },
+ 
 });
