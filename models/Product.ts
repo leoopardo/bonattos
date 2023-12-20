@@ -13,8 +13,13 @@ const ProductSchema = new Schema(
     collection: { type: String, required: true },
     category: { type: String, required: true },
     brand: { type: String, required: true },
+    gender: { type: String },
+    p: { type: Boolean },
+    m: { type: Boolean },
+    g: { type: Boolean },
+    gg: { type: Boolean },
   },
-  { timestamps: true }
+  { timestamps: true, strictQuery: "throw" }
 );
 
 export default mongoose.models.Product ||
