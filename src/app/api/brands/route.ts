@@ -1,9 +1,8 @@
 import { NextResponse } from "next/server";
 import connect from "../../../../db";
-import { NextApiRequest, NextApiResponse } from "next";
 import Brands from "../../../../models/Brands";
 
-export const GET = async (req: NextApiRequest, res: any) => {
+export const GET = async (req: any) => {
   const params = new URLSearchParams(req.url?.split("?")[1]);
   const limit = Number(params.get("limit"));
   const page = Number(params.get("page")) || 1;
@@ -35,7 +34,7 @@ export const GET = async (req: NextApiRequest, res: any) => {
 };
 
 
-export const POST = async (req: any, res: NextApiResponse) => {
+export const POST = async (req: any) => {
   const body = await req?.json(); // Agora 'body' contém o corpo da solicitação
 
   try {
